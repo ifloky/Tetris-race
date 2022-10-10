@@ -1,0 +1,217 @@
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(135, 167, 150, 0.2);
+  height: 100vh;
+}
+
+.game-wrapper {
+  position: relative;
+  display: flex;
+    background: url('/public/img/el1.svg'); 
+    background-size: 1.8vw;
+    width: 30vw;
+    max-height: 90vh;
+    aspect-ratio: 9 / 16;
+}
+
+
+@media screen and (max-width: 968px) {
+  .game-wrapper {
+      width: 100vw;
+  }
+}
+
+.track {
+  width: 66%;
+  height: 36vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.line-left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.line-left img{
+  width: 1.8vw;
+  margin-bottom: 3.6vw;
+}
+
+.line-right {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.line-right img {
+  width: 1.8vw;
+  margin-bottom: 3.6vw;
+}
+
+.animate-side {
+  animation: line 2s infinite linear;
+}
+
+.car {
+  position: absolute;
+}
+
+.car img {
+    position: relative;
+    width: 5.4vw;
+    left: 3.6vw;
+}
+
+.car1 {
+  top: 27vw;
+  left: 7.2vw;
+
+}
+
+.car2 {
+  top: 21.6vw;
+}
+
+.car3 {
+  top: 1.8vw;
+  left: 7.2vw;
+}
+
+.display {
+  font-size: 0.88vw;
+  position: relative;
+  width: 34%;
+  height: 100%;
+  border-left: 5px #000 solid;
+  box-sizing: border-box;
+}
+
+.score-block p {
+  height: 1.8vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-block {
+  position: absolute;
+  bottom: 0.5vw;
+}
+
+.info-block-inner {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 15px;
+  height: 1.8vw;
+}
+
+.info-block-inner img{
+  max-width: 25px;
+  max-height: 35px;
+  margin-right: 20px;
+}
+
+.controls-line {
+  border-top: 5px solid #000 ;
+  width: 20vw;
+  top: 36vw;
+  position: absolute;
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 3.6vw;
+  top: 37.8vw;
+  width: 100%;
+}
+
+.control-btn{
+  background: #FFF740;
+  width: 3.6vw;
+  height: 1.8vw;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-btn img{
+  width: 30%;
+  height: 65%;;
+}
+
+.btn-up {
+  position: relative;
+  left: 5.4vw;
+}
+
+.btn-down {
+  position: relative;
+  left: 1.8vw;
+  top: 3.6vw;
+}
+
+.btn-right {
+    position: relative;
+    left: 1.8vw;
+    top: 1.8vw;
+}
+
+.btn-left {
+  position: relative;
+  right: 9vw;
+  top: 1.8vw;
+}
+
+@keyframes line {
+  0%{
+    transform: translateY(-2.7vw);
+  }
+  100% {
+    transform: translateY(4.6vw);
+  }
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-btn {
+  width: 5.4vw;
+  height: 1.8vw;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1.8vw;
+  position: relative;
+}
+
+.menu-btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4.8vw;
+  height: 1.2vw;
+  border: 3px solid rgba(255, 255, 255, 0.3);;
+}
+
+.menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
