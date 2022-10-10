@@ -5,6 +5,27 @@ function App() {
 
   const  [animateSide, setAnimateSide] = React.useState(false);
 
+  React.useEffect(() => {
+    const myCar = document.getElementById('myCar')
+
+    window.addEventListener('keydown', (event)=>{
+      if (event.key == 'ArrowRight') {
+        myCar.style.right += "50px"
+      }
+      if (event.key == 'ArrowLeft') {
+        console.log('click to left');
+      }
+      if (event.key == 'ArrowUp') {
+        console.log('click to up');
+      }
+      if (event.key == 'ArrowDown') {
+        console.log('click to down');
+      }
+    })
+  
+    }, [])
+
+    
   return (
     <div className="App">
       <section className='game-wrapper'>
@@ -21,14 +42,14 @@ function App() {
               <img src="img/Line.svg" alt="" className={`${animateSide ? 'animate-side leftOne' : 'leftOne'}`}/>
               <img src="img/Line.svg" alt="" className={`${animateSide ? 'animate-side leftOne' : 'leftOne'}`}/>
             </div>
-            <div className="car car1">
+            <div className="car car1" id="myCar">
               <img src="../img/Car.svg" alt="" className='imgCar imgCar1'/>
             </div>
             <div className="car car2">
               <img src="img/Car.svg" alt="" className='imgCar imgCar2'/>
             </div>
             <div className="car car3">
-              <img src="img/Car.svg" alt="" className='imgCar imgCar3'/>
+              <img src="img/Car.svg" alt="" className='imgCar imgCar3' />
             </div>
             <div className="line-right">
               <img src="img/Line.svg" alt="" className={`${animateSide ? 'animate-side rightOne' : 'rightOne'}`}/>
@@ -53,7 +74,7 @@ function App() {
               <p className="level-text">1</p>
             </div>
             <section className='menu'>
-              <div className="menu-btn" onClick={() => setAnimateSide(true)} >START</div>
+              <div id="menu-start" className="menu-btn" onClick={() => setAnimateSide(true)} >START</div>
               <div className='menu-btn' onClick={() => setAnimateSide(false)} >STOP</div>
             </section>
             <div className="info-block">

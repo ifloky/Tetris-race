@@ -39,6 +39,7 @@
 }
 
 .line-left img{
+  transform: translateY(-2.7vw);
   width: 1.8vw;
   margin-bottom: 3.6vw;
 }
@@ -51,6 +52,7 @@
 }
 
 .line-right img {
+  transform: translateY(-2.7vw);
   width: 1.8vw;
   margin-bottom: 3.6vw;
 }
