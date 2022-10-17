@@ -57,9 +57,17 @@
   margin-bottom: 3.6vw;
 }
 
-.animate-side {
+/*.animate-side {
   animation: line 2s infinite linear;
 }
+
+.animate-car {
+  animation: car 36s infinite linear;
+}
+
+.animate-car2 {
+  animation: car2 36s infinite linear;
+}*/
 
 .car {
   position: absolute;
@@ -78,11 +86,11 @@
 }
 
 .car2 {
-  top: 21.6vw;
+  top: 0;
 }
 
 .car3 {
-  top: 1.8vw;
+  top: 0;
   left: 7.2vw;
 }
 
@@ -183,6 +191,36 @@
   }
   100% {
     transform: translateY(4.6vw);
+  }
+}
+
+@keyframes car2 {
+  0% {
+    transform: translateY(-28vw);
+  }
+
+  100% {
+    transform: translateY(38vw);
+  }
+}
+
+@keyframes car3 {
+  0% {
+    transform: translateY(-8vw);
+  }
+
+  100% {
+    transform: translateY(58vw);
+  }
+}
+
+@keyframes car4 {
+  0% {
+    transform: translateY(-48vw);
+  }
+
+  100% {
+    transform: translateY(18vw);
   }
 }
 
